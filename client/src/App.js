@@ -1,12 +1,11 @@
-// Здесь будет сборка компонентов
-
 import React, { Component } from "react";
+import Home from "./Home.js";
 
 class App extends Component {
     render() {
         return (
             <div>
-                <h1>Привет, мир!</h1>
+                <Home />
             </div>
         );
     }
