@@ -30,7 +30,7 @@ class Home extends Component {
                     <div>
                         <div className="posts">
                             <h3>Пост 1!</h3>
-                            <img src="https://imgholder.ru/323x300/9dbf16/xfff,atext=image.pagespeed.ic.h4y7-DvpPp.webp" />
+                            <img src="https://imgholder.ru/323x300/9dbf16/xfff,atext=image.pagespeed.ic.h4y7-DvpPp.webp" alt="error" />
                             <div>Место для тегов</div>
                             <div>
                                 Место для текста поста
@@ -45,7 +45,7 @@ class Home extends Component {
 
                         <div>
                             <h3>Пост 2!</h3>
-                            <img src="https://imgholder.ru/323x300/9dbf16/xfff,atext=image.pagespeed.ic.h4y7-DvpPp.webp" />
+                            <img src="https://imgholder.ru/323x300/9dbf16/xfff,atext=image.pagespeed.ic.h4y7-DvpPp.webp" alt="error" />
                             <div>Место для тегов</div>
                             <div>
                                 Место для текста поста
@@ -60,7 +60,7 @@ class Home extends Component {
 
                         <div>
                             <h3>Пост 3!</h3>
-                            <img src="https://imgholder.ru/323x300/9dbf16/xfff,atext=image.pagespeed.ic.h4y7-DvpPp.webp" />
+                            <img src="https://imgholder.ru/323x300/9dbf16/xfff,atext=image.pagespeed.ic.h4y7-DvpPp.webp" alt="error" />
                             <div>Место для тегов</div>
                             <div>
                                 Место для текста поста
