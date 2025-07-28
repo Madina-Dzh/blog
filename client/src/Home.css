@@ -1,3 +1,87 @@
 #home {
-    background-color: antiquewhite;
+    background-color: #98FB98;
+}
+
+header {
+    border-bottom: #006400 5px solid;
+}
+
+header div {
+    background-color: #228B22;
+    padding: 20px 0px;
+}
+
+.authorization {
+    font-size: 16px;
+    font-family: sans-serif;
+    float: right;
+    margin-right: 15px;
+    background-color: #006400;
+    border: #98FB98 2px solid;
+    padding: 5px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+#menu-button {
+    font-size: 16px;
+    margin-left: 15px;
+    background-color: #006400;
+    border: #98FB98 2px solid;
+    color: #fff;
+    border-radius: 8px;
+    width: 40px;
+    height: 35px;
+}
+
+form {
+    margin-top: 20px;
+    width: max-content;
+    padding: auto;
+    margin: auto;
+    margin-top: 20px;
+}
+
+form input {
+    width: 230px;
+    height: 25px;
+    border-radius: 8px 0px 0px 8px;
+    border: #42786e solid 3px;
+    background-color: #e4fde4;
+    padding-left: 10px;
+    margin: none;
+    border-right: none;
+}
+
+form button {
+    position: relative;
+    bottom: -1px;
+    height: 32.5px;
+    border-radius: 0px 8px 8px 0px;
+    border: #42786e solid 3px;
+    background-color: #e4fde4;
+    border-left: none;
+    margin: none;
+    padding: 0px 10px;
+}
+
+.center {
+    padding: auto;
+    margin: auto;
+}
+
+#tags div {
+    display: inline;
+    background-color: #e4fde4;
+    margin-right: 15px;
+    border-radius: 8px;
+    padding: 0px 6px;
+    border: #42786e solid 1.5px;
+}
+
+#tags {
+    margin-left: 100px;
+    margin-top: 8px;
+    font-size: 12px;
+    font-family: 'Comic Sans MS';
 }
