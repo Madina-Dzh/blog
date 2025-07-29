@@ -34,15 +34,20 @@ app.get('/', (req, res) => {
 })
 
 // Эдпоинт для получения названия поста
-app.get('/head-post', (req, res) => {
-    const sql = 'SELECT heading FROM posts';
-    db.query(sql, (err, results) => {
+app.get('/head-post/:id', (req, res) => {
+    const postId = req.params.id; // получить ID из URL параметра
+
+    const sql = 'SELECT heading FROM posts WHERE id = ?'; // запрос с условием по ID
+    db.query(sql, [postId], (err, results) => {
         if (err) {
             return res.status(500).send(err);
         }
-        res.json(results)
-    })
-})
+        if (results.length === 0) {
+            return res.status(404).json({ message: 'Пост не найден' });
+        }
+        res.json({ heading: results[0].heading }); // вернуть название одного поста
+    });
+});
 
 // Эдпоинт для получкния текста поста
 app.get('/content-post', (req, res) => {
