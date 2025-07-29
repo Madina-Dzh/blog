@@ -32,3 +32,25 @@ app.get('/', (req, res) => {
         res.json(results)
     })
 })
+
+// Эдпоинт для получения названия поста
+app.get('/head-post', (req, res) => {
+    const sql = 'SELECT heading FROM posts';
+    db.query(sql, (err, results) => {
+        if (err) {
+            return res.status(500).send(err);
+        }
+        res.json(results)
+    })
+})
+
+// Эдпоинт для получкния текста поста
+app.get('/content-post', (req, res) => {
+    const sql = 'SELECT сontent FROM posts';
+    db.query(sql, (err, results) => {
+        if (err) {
+            return res.status(500).send(err);
+        }
+        res.json(results)
+    })
+})
