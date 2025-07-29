@@ -24,7 +24,7 @@ app.listen(8000, () => {
 
 // Эддпоинт для получения данных из БД
 app.get('/', (req, res) => {
-    const sql = 'SELECT * FROM tasks';
+    const sql = 'SELECT * FROM posts';
     db.query(sql, (err, results) => {
         if (err) {
             return res.status(500).send(err);
