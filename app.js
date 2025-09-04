@@ -9,6 +9,12 @@ const app = express()
 app.use(cors()) // для отсутствия ошибок при ajax-запросах
 app.use(bodyParser.json()) // сказали приложению использовать bodyParser
 
+app.listen(8000, ()=> {console.log("app started")})
+
+app.get('/', (req, res) => {
+    res.send('Server working')
+})
+
 //Подключение к БД
 const db = mysql.createConnection({
     host: 'localhost',
@@ -16,12 +22,7 @@ const db = mysql.createConnection({
     password: '',
     database: 'blog'
 })
-
-// Запуск сервера
-app.listen(8000, () => {
-    console.log('App started on port 8000')
-})
-
+/*
 // Эддпоинт для получения данных из БД
 app.get('/', (req, res) => {
     const sql = 'SELECT * FROM posts';
@@ -59,3 +60,4 @@ app.get('/content-post', (req, res) => {
         res.json(results)
     })
 })
+    */
