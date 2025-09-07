@@ -9,8 +9,10 @@ function Home() {
 
     let data = axios.get('http://localhost:8000/')
     data.then(res => {
-        console.log(res);
-    })
+        setPost(res.data);
+    }, [])
+
+   //console.log(post);
 
     return (
         <div id="home">
@@ -37,15 +39,11 @@ function Home() {
                         <div>Тег 6</div>
                     </div>
                     <div className="post-place">
-                        <Post />
-                        <Post />
-                        <Post />
-                        <Post />
-                        <Post />
-                        <Post />
-                        <Post />
-                        <Post />
-                        <Post />
+                        {
+                            post.map(el => {
+                                return <Post heading={el.heading} />
+                            })
+                        }
                     </div>
                 </main>
 
