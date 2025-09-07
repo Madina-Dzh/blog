@@ -11,20 +11,9 @@ let Post = (props) => {
             <div className="content-post">
                 <div className="tags-imgs">
                     <img src="https://imgholder.ru/323x300/9dbf16/xfff,atext=image.pagespeed.ic.h4y7-DvpPp.webp" alt="error" />
-                    <div>Место для тегов
-                        #еда
-                        #любовь
-                        #питомцы
-                    </div>
+                    <div>{props.tag}</div>
                 </div>
-                <div className="content-text">
-                    Место для текста поста
-                    Место для текста поста
-                    Место для текста поста
-                    Место для текста поста
-                    Место для текста поста
-
-                </div>
+                <div className="content-text">{(props.сontent).substr(0, 185)}...</div>
             </div>
 
             <div className="button-post">
