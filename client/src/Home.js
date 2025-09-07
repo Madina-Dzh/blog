@@ -7,12 +7,14 @@ import Post from "./Post";
 function Home() {
     const [post, setPost] = useState([]);
 
-    let data = axios.get('http://localhost:8000/')
+    React.useEffect(() => {
+        let data = axios.get('http://localhost:8000/')
     data.then(res => {
         setPost(res.data);
+    })
     }, [])
 
-    //console.log(post);
+    console.log(post);
 
     return (
         <div id="home">
