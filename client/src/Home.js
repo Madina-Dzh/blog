@@ -1,11 +1,19 @@
-import React, { Component } from "react";
+
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import './Home.css';
 import Post from "./Post";
 
-class Home extends Component {
-    render() {
-        return (
-            <div id="home">
+function Home() {
+    const [post, setPost] = useState([]);
+
+    let data = axios.get('http://localhost:8000/')
+    data.then(res => {
+        console.log(res);
+    })
+
+    return (
+        <div id="home">
 
                 <header>
                     <div>
@@ -42,8 +50,7 @@ class Home extends Component {
                 </main>
 
             </div>
-        );
-    }
+    );
 }
 
 export default Home;

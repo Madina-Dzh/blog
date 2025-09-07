@@ -11,9 +11,6 @@ app.use(bodyParser.json()) // сказали приложению использ
 
 app.listen(8000, ()=> {console.log("app started")})
 
-app.get('/', (req, res) => {
-    res.send('Server working')
-})
 
 //Подключение к БД
 const db = mysql.createConnection({
@@ -22,7 +19,7 @@ const db = mysql.createConnection({
     password: '',
     database: 'blog'
 })
-/*
+
 // Эддпоинт для получения данных из БД
 app.get('/', (req, res) => {
     const sql = 'SELECT * FROM posts';
@@ -33,7 +30,7 @@ app.get('/', (req, res) => {
         res.json(results)
     })
 })
-
+/*
 // Эдпоинт для получения названия поста
 app.get('/head-post/:id', (req, res) => {
     const postId = req.params.id; // получить ID из URL параметра
